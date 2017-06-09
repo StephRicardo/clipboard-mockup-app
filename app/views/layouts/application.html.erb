@@ -14,10 +14,34 @@
   <body>
   	<%= render 'layouts/header' %>
 
-    <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
+      <span id="content">
 
-    <%= yield %>
+        <span id="layout_search">
+          <span><i id="chosen" class="fa fa-th-large" aria-hidden="true" aria-label="box layout"></i></span>
+          <span><i class="fa fa-bars" aria-hidden="true" aria-label="bars layout"></i></span>
+          <span><input type="text" name="search"></span>
+        </span>
+
+        <span id="content_body">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+
+        <%= yield %>
+        </span>
+
+      </span>
+
+      <span id="second_nav_bar">
+      <span><button id="selected">Architecture</button></span>
+      <span><button>Design</button></span>
+      <span><button>Products</button></span>
+      <span><button>Minimal</button></span>
+      <span><button>Autos</button></span>
+      <span><button>Technology</button></span>
+      <span><button>Photography</button></span>
+    </span>
+
+
   </body>
 </html>
