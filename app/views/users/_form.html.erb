@@ -12,21 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username, class: 'form-control' %>
+    <p>
+      <%= form.label :username %>
+      <%= form.text_field :username, class: 'form-control' %>
+    </p>
   </div>
 
   <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: 'form-control' %>
+    <p>
+      <%= form.label :password %>
+      <%= form.password_field :password, class: 'form-control' %>
+    </p>
   </div>
 
   <div class="field">
-    <%= form.label :password_confirmation, "Confirmation" %>
-    <%= form.password_field :password_confirmation, class: 'form-control' %>
+    <p>
+      <%= form.label :password_confirmation, "Confirmation" %>
+      <%= form.password_field :password_confirmation, class: 'form-control' %>
+    </p>
   </div>
 
   <div class="actions">
-    <%= form.submit "Submit"%>
+    <p>
+      <%= form.submit "Submit"%>
+    </p>
   </div>
 <% end %>
