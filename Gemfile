@@ -5,8 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# For image uploading!
+gem 'paperclip'
+# For those cool icons
 gem "font-awesome-rails"
+# For pretty diagrams
 gem 'rails-erd'
+# For easier reading of records in the database
 gem 'hirb'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
