@@ -1,23 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Title:</strong>
-  <%= @design.title %>
+  <strong><%= @design.title %></strong>
 </p>
 
 <p>
-  <strong>Image:</strong>
   <%= link_to image_tag(@design.image.url(:boxbc)), @design.image.url %>
 </p>
 
 <p>
   <strong>Price:</strong>
   <%= @design.price %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @design.user %>
 </p>
 
 <%= link_to 'Edit', edit_design_path(@design) %> |

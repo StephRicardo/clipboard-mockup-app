@@ -18,17 +18,12 @@
 
   <div class="field">
     <%= f.label :image %>
-    <%= f.text_field :image, id: :design_image %>
+    <%= f.file_field :image, id: :design_image %>
   </div>
 
   <div class="field">
     <%= f.label :price %>
     <%= f.text_field :price, id: :design_price %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id, id: :design_user_id %>
   </div>
 
   <div class="actions">

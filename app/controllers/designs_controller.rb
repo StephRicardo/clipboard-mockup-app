@@ -24,7 +24,8 @@ class DesignsController < ApplicationController
   # POST /designs
   # POST /designs.json
   def create
-    @design = Design.new(design_params)
+    @design = current_user.designs.build(design_params)
+    @design.user_id = current_user.id
 
     respond_to do |format|
       if @design.save
