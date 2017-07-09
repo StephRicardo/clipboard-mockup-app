@@ -1,33 +1,57 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Designs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Image</th>
-      <th>Price</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @designs.each do |design| %>
+<span id="design_body">
+  <!-- <table>
+    <thead>
       <tr>
-        <td><%= design.title %></td>
-        <td><%= design.image %></td>
-        <td><%= design.price %></td>
-        <td><%= design.user %></td>
-        <td><%= link_to 'Show', design %></td>
-        <td><%= link_to 'Edit', edit_design_path(design) %></td>
-        <td><%= link_to 'Destroy', design, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>User</th>
+        <th colspan="3"></th>
       </tr>
+    </thead>
+
+    <tbody>
+      <% @designs.each do |design| %>
+        <tr>
+          <td><%= design.title %></td>
+          <td><%= design.image %></td>
+          <td><%= design.price %></td>
+          <td><%= design.user %></td>
+          <td><%= link_to 'Show', design %></td>
+          <td><%= link_to 'Edit', edit_design_path(design) %></td>
+          <td><%= link_to 'Destroy', design, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br> -->
+
+  <!-- <span class="column"> -->
+  <%= link_to 'New Design', new_design_path %>
+
+  <% @designs.each do |design| %>
+    <%= link_to design_path(design.id) do %>
+      <span class="boxc">
+        <span class="boxc_pic">
+          <%= link_to image_tag(design.image.url(:boxbc)), design.image.url %>
+        </span>
+        <span class="boxc_text">
+          <span>
+              <h1><%= design.title %></h1>
+              <br>
+              Short Description field needed <br>
+          </span>
+          <span class="line">_____________________________</span>
+        </span>
+        <span class="boxc_link">
+          <span><a href="#">needweb.net</a></span>
+          <span><i class="fa fa-star" aria-hidden="true" aria-label="star"></i></span>
+          <span class="num">476</span>
+        </span>
+      </span>
     <% end %>
-  </tbody>
-</table>
+  <% end %>
 
-<br>
-
-<%= link_to 'New Design', new_design_path %>
+  <!-- </span> -->
+</span>
