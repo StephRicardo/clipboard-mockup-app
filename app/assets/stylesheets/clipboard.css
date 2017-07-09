@@ -14,7 +14,7 @@ body {
 /*---------------------------------------------------------------------------------------*/
 
 .header {
-  height: 14em;
+  height: 224px;
   width: 100%;
   margin: 0px;
   position: relative;
@@ -42,12 +42,12 @@ body {
 }
 
 #title {
-  font-size: 3.25em;
+  font-size: 52px;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   height: inherit;
-  margin-left: 1em;
-  margin-top: -0.6em;
+  margin-left: 50px;
+  margin-top: -32px;
   position: absolute;
   text-decoration: none;
   color: #f0f0f0;
@@ -62,10 +62,10 @@ body {
 #annie {
   border-radius: 50%;
   border: 3px solid;
-  height: 3em;
-  width: 3em;
-  margin-left: 22.5em;
-  margin-top: -1.5em;
+  height: 48px;
+  width: 48px;
+  margin-left: 360px;
+  margin-top: -24px;
   position: absolute;
 }
 
@@ -83,8 +83,9 @@ body {
 #top_nav_links {
   list-style-type: none;
   position: absolute;
-  left: 60.5em;
-  top: 4.25em;
+  left: 968px;
+  top: 68px;
+  margin-left: 32px;
 }
 
 #inner_nav_links {
@@ -93,7 +94,8 @@ body {
 
 #top_nav_links a {
   font-size: .8em;
-  width: 8em;
+  font-size: 13px;
+  width: 128px;
   color: #f0f0f0;
   font-family: 'Montserrat:bold', sans-serif;
   font-weight: 600;
@@ -106,7 +108,7 @@ body {
 
 /*#primary_nav_wrap ul
 {
-  
+
 }*/
 
 #empty_top_nav{
@@ -116,7 +118,7 @@ body {
   height: 100%;
   position: absolute;
   left: 85%;
-}   
+}
 
 .bottom_row_nav {
   width: 100%;
@@ -135,21 +137,22 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 2em;
+  padding-left: 32px;
 }
 
 /*This code helps me format the buttons and make them semi-responsive */
 
 #bottom_nav_bar button {
   height: inherit;
-  width: 9em;
-  padding: 1em;
+  width: 100px;
+  padding: 12px;
+  font-size: 13px;
   border: none;
   background-color: #2b2e36;
   color: #f0f0f0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  margin-left: 1.3em;
+  margin-left: 20px;
   justify-content: space-around;
   align-items: flex-end;
 }
@@ -174,7 +177,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: .8em;
+  font-size: 14px;
   position: absolute;
 }
 
@@ -201,7 +204,7 @@ body {
 
 #layout_search {
   width: 80%;
-  height: 2.5em;
+  height: 40px;
   position: absolute;
   background-color: #f0f0f0;
   top: 3%;
@@ -213,13 +216,15 @@ body {
 
 #layout_search i {
   color: #cccccc;
-  font-size: .9em;
-  padding-right: .5em;
+  font-size: 14px;
+  padding-right: 8px;
+
 }
 
 #layout_search i:hover {
   color: #2b2e36;
-  font-size: .9em;
+  font-size: 14px;
+
 }
 
 #layout_search #chosen {
@@ -229,16 +234,17 @@ body {
 #layout_search input {
   background-color: #f0f0f0;
   background-image: url('/search.png');
-  background-position: 100% 50%; 
+  background-position: 100% 50%;
   background-repeat: no-repeat;
   border-style: none;
-  height: 1.5em;
+  height: 24px;
   font-family: 'Montserrat', sans-serif;
-  font-size: .8em;
-  padding-left: .5em;
-  margin-left: 65em;
+  font-size: 14px;
+  padding-left: 8px;
+  margin-left: 900px;
   position: absolute;
-  margin-top: -.75em;
+  margin-top: -12px;
+
 }
 
 #content_body {
@@ -272,15 +278,16 @@ body {
 }
 
 #second_nav_bar button {
-  height: 3em;
-  width: 15.5em;
+  height: 40px;
+  width: 215px;
   border: none;
   background-color: #e0e0e0;
   color: #a4a7ab;
   font-family: 'Montserrat', sans-serif;
-  font-size: .8em;
+  font-size: 13px;
   font-weight: 600;
-  margin-top: 1em;
+  margin-top: 12px;
+
 }
 
 #second_nav_bar button:hover {
@@ -291,7 +298,7 @@ body {
 #second_nav_bar #selected {
   border-left: #3ebdc2 3px solid;
   color: #414852;
-  margin-top: 3em;
+  margin-top: 48px;
 }
 
 
