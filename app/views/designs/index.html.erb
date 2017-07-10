@@ -26,16 +26,19 @@
   </table>
 
   <br> -->
+<!--  -->
+  <!-- <%= link_to 'New Design', new_design_path %> -->
 
-  <!-- <span class="column"> -->
-  <%= link_to 'New Design', new_design_path %>
 
   <% @designs.each do |design| %>
-    <%= link_to design_path(design.id) do %>
       <span class="boxc">
+
         <span class="boxc_pic">
-          <%= link_to image_tag(design.image.url(:boxbc)), design.image.url %>
+          <%= link_to design_path(design.id) do %>
+            <%= link_to image_tag(design.image.url(:boxbc)), design.image.url %>
+          <% end %>
         </span>
+
         <span class="boxc_text">
           <span>
               <h1><%= design.title %></h1>
@@ -44,14 +47,15 @@
           </span>
           <span class="line">_____________________________</span>
         </span>
+
         <span class="boxc_link">
           <span><a href="#">needweb.net</a></span>
           <span><i class="fa fa-star" aria-hidden="true" aria-label="star"></i></span>
           <span class="num">476</span>
         </span>
+
       </span>
-    <% end %>
   <% end %>
 
-  <!-- </span> -->
+
 </span>
