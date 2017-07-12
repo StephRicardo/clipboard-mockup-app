@@ -1,0 +1,5 @@
+LOG:  database system was shut down at 2017-07-11 21:07:34 EDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "clipboard_development" does not exist

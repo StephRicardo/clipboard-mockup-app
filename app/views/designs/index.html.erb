@@ -1,4 +1,4 @@
-<span id="design_body">
+<span id="design_body" class="grid" data-masonry='{ "itemSelector": ".grid-item" }'>
   <!-- <table>
     <thead>
       <tr>
@@ -31,17 +31,17 @@
 
 
   <% @designs.each do |design| %>
-      <span class="boxc">
+      <div class="boxc grid-item">
 
         <span class="boxc_pic">
           <%= link_to design_path(design.id) do %>
-            <%= link_to image_tag(design.image.url(:boxbc)), design.image.url %>
+            <%= image_tag(design.image.url(:boxbc)) %>
           <% end %>
         </span>
 
         <span class="boxc_text">
           <span>
-              <h1><%= design.title %></h1>
+              <strong><p><%= design.title %></p></strong>
               <br>
               Short Description field needed <br>
           </span>
@@ -49,12 +49,12 @@
         </span>
 
         <span class="boxc_link">
-          <span><a href="#">needweb.net</a></span>
-          <span><i class="fa fa-star" aria-hidden="true" aria-label="star"></i></span>
-          <span class="num">476</span>
+          <span id="link1"><a href="#">needweb.net</a></span>
+          <span id="link2"><i class="fa fa-star" aria-hidden="true" aria-label="star"></i></span>
+          <span class="num" id="link3">476</span>
         </span>
 
-      </span>
+      </div>
   <% end %>
 
 

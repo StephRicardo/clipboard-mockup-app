@@ -254,21 +254,18 @@ body {
   position: absolute;
   top: 9%;
   left: 4%;
-  /*display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  overflow-y: scroll;*/
+  overflow-y: scroll;
 }
 
 #design_body {
   width: 100%;
   height: 100%;
   /*top: 15%;*/
-  /*display: flex;
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;*/
   overflow-y: scroll;
   position: absolute;
+  flex-wrap: wrap;
 }
 
 /*.column {
@@ -346,49 +343,50 @@ body {
 /*---------------------------------------------------------------------------------------*/
 
 .boxc {
-  background-color: pink;
   width: 243px;
-  min-height: 448px;
-  margin-bottom: 32px;
+  height: fit-content;
+  margin: 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   box-shadow: 0px 0px 2px 1px #dedede;
+  background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .boxc_pic {
   width: inherit;
-  height: 320px;
+  /*max-height: 320px;*/
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .boxc_pic img{
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  min-height: 320px;
-  max-width: 100%;
-  object-fit: cover;
+  /*min-height: 320px;*/
+  /*height: 100%;*/
+  /*object-fit: contain;*/
+  /*object-fit: fill;*/
 }
 
 .boxc_text {
   background-color: #ffffff;
-  width: inherit;
-  /*height: 6em;*/
-  height: 256px;
+  width: initial;
+  height: 75px;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 110%;
   color: #666e78;
   padding: 16px;
   overflow: hidden;
+
 }
 
 .boxc_link {
   background-color: #ffffff;
   width: initial;
-  /*height: 2em;*/
   height: 32px;
-  /*border-bottom-right-radius: .25em;
-  border-bottom-left-radius: .25em;*/
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   font-family: 'Montserrat', sans-serif;
@@ -398,9 +396,26 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 4px;
+}
+
+#link1 {
+  margin-left: 16px;
+}
+
+#link2 {
+  margin-left: 90px;
+}
+
+#link2:hover {
+  margin-left: 90px;
+  color: gold;
+}
+
+#link3 {
+  margin-left: 5px;
 }
 
 /*---------------------------------------------------------------------------------------*/
