@@ -69,15 +69,6 @@ body {
   position: absolute;
 }
 
-/*Don't need this for this mock-up app*/
-/*#annie:hover {
-  border-radius: 50%;
-  border: 3px solid;
-  border-color: #3ebdc2;
-  height: 3em;
-  width: 3em;
-}*/
-
 /* This code helps me update the appearance of the dropdown select and options. */
 
 #top_nav_links {
@@ -105,11 +96,6 @@ body {
 #top_nav_links a:hover {
    color: #3ebdc2;
 }
-
-/*#primary_nav_wrap ul
-{
-
-}*/
 
 #empty_top_nav{
   background-color: #202329;
