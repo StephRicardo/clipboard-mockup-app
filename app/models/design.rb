@@ -1,6 +1,6 @@
 class Design < ApplicationRecord
-  belongs_to :user
-  has_many :stars, dependent: :destroy
+  belongs_to :creator, foreign_key: :creator_id, class_name: "User"
+  has_many :stars
   has_many :users, through: :stars
 
   has_attached_file :image, styles: { boxa: "243x176", boxbc: "243x320", boxd: "243x288" }

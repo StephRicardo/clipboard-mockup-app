@@ -22,7 +22,9 @@
 
         <span class="boxc_link">
           <span id="link1"><a href="#">needweb.net</a></span>
-          <span id="link2"><i class="fa fa-star" aria-hidden="true" aria-label="star"></i></span>
+          <%= div_for post, :id => 'link2' do %>
+            <%= render partial: 'stars/button', locals: { post: post } %>
+          <% end %>
           <span class="num" id="link3">476</span>
         </span>
 

@@ -56,7 +56,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   # DELETE /users/1.json
-  ## Will create this feature in the future. 
+  ## Will create this feature in the future.
   # def destroy
   #   @user.destroy
   #   respond_to do |format|
