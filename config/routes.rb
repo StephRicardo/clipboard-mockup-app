@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :stars
   resources :designs
   resources :users
 
@@ -11,8 +12,7 @@ Rails.application.routes.draw do
 	post '/login' => 'sessions#create'
   delete '/logout' =>'sessions#destroy'
 
-  
-
-
+  match 'star', to: 'stars#star', via: :post
+  match 'unstar', to: 'stars#unstar', via: :delete
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
