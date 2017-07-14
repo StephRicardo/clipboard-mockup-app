@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712034810) do
+ActiveRecord::Schema.define(version: 20170713042721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "designs", force: :cascade do |t|
     t.string "price"
-    t.bigint "user_id"
+    t.bigint "creator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
@@ -26,7 +26,16 @@ ActiveRecord::Schema.define(version: 20170712034810) do
     t.datetime "image_updated_at"
     t.string "title"
     t.string "description"
-    t.index ["user_id"], name: "index_designs_on_user_id"
+    t.index ["creator_id"], name: "index_designs_on_creator_id"
+  end
+
+  create_table "stars", force: :cascade do |t|
+    t.bigint "design_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["design_id"], name: "index_stars_on_design_id"
+    t.index ["user_id"], name: "index_stars_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,5 +48,5 @@ ActiveRecord::Schema.define(version: 20170712034810) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "designs", "users"
+  add_foreign_key "designs", "users", column: "creator_id"
 end

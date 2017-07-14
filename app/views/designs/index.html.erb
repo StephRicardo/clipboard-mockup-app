@@ -1,34 +1,4 @@
 <span id="design_body" class="grid" data-masonry='{ "itemSelector": ".grid-item" }'>
-  <!-- <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Image</th>
-        <th>Price</th>
-        <th>User</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @designs.each do |design| %>
-        <tr>
-          <td><%= design.title %></td>
-          <td><%= design.image %></td>
-          <td><%= design.price %></td>
-          <td><%= design.user %></td>
-          <td><%= link_to 'Show', design %></td>
-          <td><%= link_to 'Edit', edit_design_path(design) %></td>
-          <td><%= link_to 'Destroy', design, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br> -->
-<!--  -->
-  <!-- <%= link_to 'New Design', new_design_path %> -->
-
 
   <% @designs.each do |design| %>
       <div class="boxc grid-item">
@@ -49,9 +19,11 @@
         </span>
 
         <span class="boxc_link">
-          <span id="link1"><a href="#">needweb.net</a></span>
-          <span id="link2"><i class="fa fa-star" aria-hidden="true" aria-label="star"></i></span>
-          <span class="num" id="link3">476</span>
+          <span id="design_link"><a href="#">needweb.net</a></span>
+          <%= div_for design do %>
+            <%= render partial: 'stars/button', locals: { design: design } %>
+          <% end %>
+          <span id="star_count"><%= design.stars.count %></span>
         </span>
 
       </div>

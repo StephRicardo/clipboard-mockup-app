@@ -4,5 +4,38 @@
   <strong>Username:</strong>
   <%= @user.username %>
 </p>
+<%= link_to 'New Design', new_design_path %>
+<br>
+<br>
+<hr>
+<h3> Your Favorite Designs </h3>
+<span id="design_body" class="grid" data-masonry='{ "itemSelector": ".grid-item" }'>
+  <% @fave_designs.each do |design| %>
+      <div class="boxc grid-item">
 
-<%= link_to 'Edit', edit_user_path(@user) %>
+        <span class="boxc_pic">
+          <%= link_to design_path(design.id) do %>
+            <%= image_tag(design.image.url(:boxbc)) %>
+          <% end %>
+        </span>
+
+        <span class="boxc_text">
+          <span>
+              <strong><p><%= design.title %></p></strong>
+              <br>
+              <%= design.description %> <br>
+          </span>
+          <span class="line">_____________________________</span>
+        </span>
+
+        <span class="boxc_link">
+          <span id="design_link"><a href="#">needweb.net</a></span>
+          <%= div_for design do %>
+            <%= render partial: 'stars/button', locals: { design: design } %>
+          <% end %>
+          <span id="star_count"><%= design.stars.count %></span>
+        </span>
+
+      </div>
+  <% end %>
+</span>

@@ -1,0 +1,9 @@
+<% if current_user.star?(design) %>
+  <%= button_to unstar_path(design_id: design.id), remote: true, method: :delete, :class => "star_button"  do %>
+    <i class="fa fa-star" aria-hidden="true" aria-label="star"></i>
+  <% end %>
+<% else %>
+  <%= button_to star_path(design_id: design.id), remote: true, :class => "star_button" do %>
+    <i class="fa fa-star-o" aria-hidden="true" aria-label="star"></i>
+  <% end %>
+<% end %>

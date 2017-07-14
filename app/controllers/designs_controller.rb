@@ -25,7 +25,7 @@ class DesignsController < ApplicationController
   # POST /designs.json
   def create
     @design = current_user.designs.build(design_params)
-    @design.user_id = current_user.id
+    @design.creator_id = current_user.id
 
     respond_to do |format|
       if @design.save
@@ -70,6 +70,6 @@ class DesignsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def design_params
-      params.require(:design).permit(:title, :image, :price, :user_id)
+      params.require(:design).permit(:title, :image, :price, :creator_id)
     end
 end

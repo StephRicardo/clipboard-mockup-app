@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    @fave_designs = fave_designs(Star.joins(:design).where(user_id: current_user.id))
   end
 
   # GET /users/new
@@ -56,7 +57,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   # DELETE /users/1.json
-  ## Will create this feature in the future. 
+  ## Will create this feature in the future.
   # def destroy
   #   @user.destroy
   #   respond_to do |format|
