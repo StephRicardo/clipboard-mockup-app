@@ -4,28 +4,28 @@
 
 ### Description
 
-During my third week at Wyncode,  I created a mock-up of a design called "Clipboard" using HTML and CSS. While learning Rails, one of our assignments was to turn that mock-up into a Rails app that met certain user stories. Here it is!
+During my third week at Wyncode, I created a mock-up of a design called [Clipboard](https://cdn.dribbble.com/users/168777/screenshots/2147087/attachments/393132/pixels.png) using HTML and CSS. While learning Rails, one of our assignments was to turn that mock-up into a Rails app that met certain user stories. Here it is!
 
-The goal was to met the following features:
+### User Stories
 
-As a User: I want to: log in
+As a User: I want to: log in,
 So that: only I can view and edit my designs
 
-As a User: I want to: update a design title
-and: upload/update a design image
-and: update a design price
+As a User: I want to: update a design title,
+and: upload/update a design image,
+and: update a design price,
 So that: my viewers see accurate information
 
-As a User: I want to be able to update my profile
-and: update my username
+As a User: I want to be able to update my profile,
+and: update my username,
 So that: I can keep my profile up to date
 
-As a User: I want to be able to favorite a design by clicking the star
+As a User: I want to be able to favorite a design by clicking the star,
 So that: I can keep favorites
 
 ### Installation
 
- Enter the following commands into your terminal to clone and set-up the project.
+Enter the following commands into your terminal to clone and set-up the project.
 
 
 To clone the project into your computer (with HTTPS):
@@ -60,4 +60,4 @@ rails s
 ```
 
 ### Usage
-After typing `rails s` into your terminal, you can visit localhost:3000 in your browser to view the site and use it!
+After typing `rails s` into your terminal, you can visit **localhost:3000** in your browser to view the site and use it!
