@@ -304,20 +304,21 @@ body {
   padding: 4px;
 }
 
-#link1 {
+#design_link {
   margin-left: 16px;
 }
 
-#link2 {
-  margin-left: 90px;
+.star_button {
+  border: none;
+  background:none;
+  margin-left: 70px;
 }
 
-#link2:hover {
-  margin-left: 90px;
+.star_button:hover {
   color: gold;
 }
 
-#link3 {
+#star_count {
   margin-left: 5px;
 }
 

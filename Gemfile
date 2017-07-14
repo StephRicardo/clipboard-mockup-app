@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# To use div_for in the design index page
+gem 'record_tag_helper', '~> 1.0'
 # For image uploading!
 gem 'paperclip'
 # For those cool icons

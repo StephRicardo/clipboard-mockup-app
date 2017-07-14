@@ -1,9 +1,9 @@
-<!-- TODO Update Heart to Star, embed font awesome star icon. Step 7 in tutorial  -->
-
-<i class="fa fa-star" aria-hidden="true" aria-label="star"></i>
-
 <% if current_user.star?(design) %>
-  <%= button_to "Unheart", unheart_path(post_id: post.id), remote: true, method: :delete  %>
+  <%= button_to unstar_path(design_id: design.id), remote: true, method: :delete, :class => "star_button"  do %>
+    <i class="fa fa-star" aria-hidden="true" aria-label="star"></i>
+  <% end %>
 <% else %>
-  <%= button_to "Heart", heart_path(post_id: post.id), remote: true  %>
+  <%= button_to star_path(design_id: design.id), remote: true, :class => "star_button" do %>
+    <i class="fa fa-star-o" aria-hidden="true" aria-label="star"></i>
+  <% end %>
 <% end %>
