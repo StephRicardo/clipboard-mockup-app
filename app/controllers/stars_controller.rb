@@ -1,5 +1,4 @@
 class StarsController < ApplicationController
-
   def star
     @user = current_user
     @design = Design.find(params[:design_id])
@@ -8,6 +7,8 @@ class StarsController < ApplicationController
     respond_to do |format|
       format.js
     end
+
+    redirect_to designs_path
   end
 
   def unstar
@@ -19,5 +20,7 @@ class StarsController < ApplicationController
     respond_to do |format|
       format.js
     end
+
+    redirect_to designs_path
   end
 end
